@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "956973969535",
+    "firebase_url": "https://lesprivate-a2f5c.firebaseio.com",
+    "project_id": "lesprivate-a2f5c",
+    "storage_bucket": "lesprivate-a2f5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956973969535:android:cbb783a5695f2188b08f4a",
+        "android_client_info": {
+          "package_name": "com.example.lesprivatee3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956973969535-fcth2pnug8sefbmgull7gk9b9k6juvv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzpogQ5AxBb50PbVny_C-TV33rZc0hqUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956973969535-fcth2pnug8sefbmgull7gk9b9k6juvv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

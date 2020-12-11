@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "233832262059",
+    "firebase_url": "https://lesprivatee3.firebaseio.com",
+    "project_id": "lesprivatee3",
+    "storage_bucket": "lesprivatee3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233832262059:android:0575560026c087a4794aee",
+        "android_client_info": {
+          "package_name": "com.example.lesprivatee3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233832262059-u277hip686cmroi2l5s6teq16k0q5t3c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lesprivatee3",
+            "certificate_hash": "2ae3c6a0d388509a7ca8e0bf1d994626a5853367"
+          }
+        },
+        {
+          "client_id": "233832262059-df4gd6dh7sra4uei2fijoks2ruv59pfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRyjHT5rHfdcxFTlQX0mYM39-i-JG5FrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233832262059-df4gd6dh7sra4uei2fijoks2ruv59pfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
