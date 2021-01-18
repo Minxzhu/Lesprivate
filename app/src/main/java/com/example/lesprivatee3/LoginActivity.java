@@ -20,9 +20,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -47,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     int success;
     ConnectivityManager conMgr;
 
-    private String url = "localhost/guru/php";
+    private String url = Server.URL + "login.php";
 
     private static final String TAG = LoginActivity.class.getSimpleName();
 
@@ -93,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         username = sharedpreferences.getString(TAG_USERNAME, null);
 
         if (session) {
-            Intent intent = new Intent(LoginActivity.this, HomeMenu.class);
+            Intent intent = new Intent(this, ProfileActivity.class);
             intent.putExtra(TAG_ID, id);
             intent.putExtra(TAG_USERNAME, username);
             finish();
@@ -143,9 +145,8 @@ public class LoginActivity extends AppCompatActivity {
         pDialog.setCancelable(false);
         pDialog.setMessage("Logging in ...");
         showDialog();
-
+        RequestQueue que = Volley.newRequestQueue(this);
         StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-
             @Override
             public void onResponse(String response) {
                 Log.e(TAG, "Login Response: " + response.toString());
@@ -172,7 +173,7 @@ public class LoginActivity extends AppCompatActivity {
                         editor.commit();
 
                         // Memanggil main activity
-                        Intent intent = new Intent(LoginActivity.this, HomeMenu.class);
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                         intent.putExtra(TAG_ID, id);
                         intent.putExtra(TAG_USERNAME, username);
                         finish();
@@ -214,7 +215,8 @@ public class LoginActivity extends AppCompatActivity {
         };
 
         // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
+//        AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
+        que.add(strReq);
     }
 
     private void showDialog() {

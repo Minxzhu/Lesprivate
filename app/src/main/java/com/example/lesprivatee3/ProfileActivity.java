@@ -37,8 +37,9 @@ public class ProfileActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();                       //LoginActivity
-                startActivity(new Intent(ProfileActivity.this, HomeMenu.class));
+                FirebaseAuth.getInstance().signOut();                       //HomeMenu
+               // startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
+                startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
             }
         });
 
