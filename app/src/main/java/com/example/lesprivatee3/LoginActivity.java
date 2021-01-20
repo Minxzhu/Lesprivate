@@ -121,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext() ,"No Internet Connection", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    // Prompt user to enter credentials
+                    // Prompt user to enter credentials ( meminta mengisi semua kolom )
                     Toast.makeText(getApplicationContext() ,"Kolom tidak boleh kosong", Toast.LENGTH_LONG).show();
                 }
             }
