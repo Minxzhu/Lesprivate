@@ -110,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 String username = txt_username.getText().toString();
                 String password = txt_password.getText().toString();
+                Log.e("username dan password", username+password);
 
                 // mengecek kolom yang kosong
                 if (username.trim().length() > 0 && password.trim().length() > 0) {
@@ -140,13 +141,13 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void checkLogin(final String username, final String password) {
+    private void checkLogin(final String user, final String pass) {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
         pDialog.setMessage("Logging in ...");
         showDialog();
         RequestQueue que = Volley.newRequestQueue(this);
-        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest strReq = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e(TAG, "Login Response: " + response.toString());
@@ -206,8 +207,8 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters to login url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("username", username);
-                params.put("password", password);
+                params.put("username", user);
+                params.put("password", pass);
 
                 return params;
             }
