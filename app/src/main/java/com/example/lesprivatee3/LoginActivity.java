@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
     public final static String TAG_ID = "id";
 
     String tag_json_obj = "json_obj_req";
-
+    //
     SharedPreferences sharedpreferences;
     Boolean session = false;
     String id, username;
